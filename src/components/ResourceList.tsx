@@ -1,3 +1,7 @@
+// -----------------------------------------------------------------
+// --------------     Example 1: Hooks Demo    ---------------------
+// -----------------------------------------------------------------
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -9,7 +13,7 @@ type Record = {
   body: string;
 };
 
-const ResourceList = (resource: ResourceListProps) => {
+const ResourceList = ({ resource }: ResourceListProps) => {
   const [resources, setResources] = useState([]);
 
   const fetchResource = async (resource: ResourceListProps['resource']) => {
@@ -18,7 +22,7 @@ const ResourceList = (resource: ResourceListProps) => {
   };
 
   useEffect(() => {
-    fetchResource(resource.resource);
+    fetchResource(resource);
   }, [resource]);
 
   return (
