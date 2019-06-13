@@ -35,7 +35,7 @@ const App = () => {
   return (
     <div>
       <h2>TypeScript Documentation Demo</h2>
-      <Hello name="Portal Client Team" enthusiasmLevel={5} />
+      <Hello name="Portal Client Team" enthusiasmLevel={3} />
     </div>
   );
 };
