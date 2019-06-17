@@ -5,19 +5,16 @@ import React, { useState, Fragment } from 'react';
 
 type HelloProps = {
   name: string; // required
+  getExclamationMarks: (numChars: number) => void; // function with named prop
   enthusiasmLevel?: number; // optional
   company: string; // default prop
 };
 
 const Hello = (props: HelloProps) => {
-  const { name, enthusiasmLevel = 1, company } = props; // destructure props
+  const { name, getExclamationMarks, enthusiasmLevel = 3, company } = props; // destructure props
 
   const [currentEnthusiasm, setcurrentEnthusiasm] = useState(enthusiasmLevel);
   const [input, setInput] = useState('');
-
-  const getExclamationMarks = (numChars: number) => {
-    return Array(numChars + 1).join('🤙');
-  };
 
   const updateEnthusiasm = (updateNumber: number) => {
     setcurrentEnthusiasm(updateNumber);
