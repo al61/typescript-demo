@@ -1,5 +1,6 @@
 // The component will take the name and optionally the number of 'call me' emoji
-//    to trail with. We can also increment/decrement the the emoji
+//    to trail with. We can also increment/decrement the the emoji.
+// Also added an input to demo event handlers
 import React, { useState, Fragment } from 'react';
 
 type HelloProps = {
@@ -32,7 +33,11 @@ const Hello = (props: HelloProps) => {
       <h1>{`Hello ${name} ＠ ${company} ${getExclamationMarks(currentEnthusiasm)}`}</h1>
       <button onClick={() => updateEnthusiasm(currentEnthusiasm + 1)}>+</button>
       <button onClick={() => updateEnthusiasm(currentEnthusiasm - 1)}>-</button>
-      <input type="text" value={input} onChange={handleInput} />
+      <hr />
+      <div>
+        <input type="text" value={input} onChange={handleInput} />
+        {input}
+      </div>
     </Fragment>
   );
 };

@@ -41,3 +41,14 @@ const App = () => {
 };
 
 export default App;
+
+// -----------------------------------------------------------------
+// -----------     TypeScript links & resources    -----------------
+// -----------------------------------------------------------------
+/*
+React & Redux TypeScript Guide: https://github.com/piotrwitek/react-redux-typescript-guide#function-components---fc
+
+
+
+
+*/

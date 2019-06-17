@@ -13,7 +13,9 @@ type Record = {
   body: string;
 };
 
-const ResourceList = ({ resource }: ResourceListProps) => {
+const ResourceList = (props: ResourceListProps) => {
+  const { resource } = props;
+
   const [resources, setResources] = useState([]);
 
   const fetchResource = async (resource: ResourceListProps['resource']) => {
