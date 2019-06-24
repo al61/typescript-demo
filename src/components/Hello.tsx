@@ -1,7 +1,11 @@
+// -----------------------------------------------------------------
+// -------------     Example 2: Documentation    -------------------
+// -----------------------------------------------------------------
+
 // The component will take the name and optionally the number of 'call me' emoji
 //    to trail with. We can also increment/decrement the the emoji.
 // Also added an input to demo event handlers
-import React, { useState, FC, Fragment, FormEvent } from 'react';
+import React, { useState, FC, Fragment, ChangeEvent } from 'react';
 
 interface HelloProps {
   name: string; // required
@@ -25,7 +29,7 @@ const Hello: FC<HelloProps> = props => {
   };
 
   // Event handlers: XXXEvent<HTMLXXXElement>
-  const handleInput = (e: FormEvent<HTMLInputElement>) => {
+  const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.currentTarget.value);
   };
 
