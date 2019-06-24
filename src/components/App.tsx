@@ -23,11 +23,11 @@ const App = () => {
 
 export default App;
 
+/*
 // -----------------------------------------------------------------
 // -------------     Example 2: Documentation    -------------------
 // -----------------------------------------------------------------
 
-/*
 import React from 'react';
 import Hello from './Hello';
 
@@ -45,16 +45,18 @@ const App = () => {
 };
 
 export default App;
+
 */
 
+/*
 // -----------------------------------------------------------------
 // -----------     TypeScript links & resources    -----------------
 // -----------------------------------------------------------------
-/*
 React & Redux TypeScript Guide: https://github.com/piotrwitek/react-redux-typescript-guide#function-components---fc
 TypeScript, redux, and testing Starter: https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter
 React+TypeScript Cheatsheets: https://github.com/typescript-cheatsheets/react-typescript-cheatsheet
 TypeScript Cheatsheet: https://devhints.io/typescript
 React Hooks in TypeScript: https://medium.com/@jrwebdev/react-hooks-in-typescript-88fce7001d0d
 TypeScript and React Hooks: https://fettblog.eu/typescript-react/hooks/#usestate
+https://levelup.gitconnected.com/usetypescript-a-complete-guide-to-react-hooks-and-typescript-db1858d1fb9c
 */
