@@ -15,14 +15,14 @@ interface HelloProps {
 
 // OLD syntax for typing function components React.SFC
 // By typing our component as an FC, the React TypeScripts types allow us to handle children
-//        and defaultProps correctly.In addition, it provides types for context, propTypes,
+//        and defaultProps correctly. In addition, it provides types for context, propTypes,
 //        contextTypes, defaultProps, displayName
 const Hello: FC<HelloProps> = props => {
-  const { name, getExclamationMarks, enthusiasmLevel = 3 } = props; // destructure props
+  const { name, getExclamationMarks, enthusiasmLevel = 3 } = props;
 
   const [currentEnthusiasm, setcurrentEnthusiasm] = useState(enthusiasmLevel);
-  const [input, setInput] = useState(''); // With simple functions, useState can infer the type from the initial value
-  // const [input, setInput] = useState<string | undefined>(''); // string or undefined
+  // const [input, setInput] = useState(''); // can infer the type from the initial value
+  const [input, setInput] = useState<string | undefined>(''); // string or undefined
 
   const updateEnthusiasm = (updateNumber: number) => {
     setcurrentEnthusiasm(updateNumber);
@@ -48,15 +48,3 @@ const Hello: FC<HelloProps> = props => {
 };
 
 export default Hello;
-
-/*
-// The React team is discussing deprecating defaultProps on function components. (after the introduction of Hooks)
-// defaultProps is very useful on classes because the props object gets passed to many different 
-        methods. Life-cycles, callbacks etc. Each one in its own scope. This makes it hard to use 
-        JS default arguments because you'd have to replicate the same defaults in each function.
-        https://github.com/reactjs/rfcs/blob/createlement-rfc/text/0000-create-element-changes.md#deprecate-defaultprops-on-function-components
-
-Hello.defaultProps = {
-  enthusiasmLevel: '3',
-};
-*/

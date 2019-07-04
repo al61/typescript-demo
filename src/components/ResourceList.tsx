@@ -5,15 +5,6 @@
 import React, { useState, FC, useEffect } from 'react';
 import axios from 'axios';
 
-type ResourceListProps = { resource: string };
-type Record = {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-};
-
-/*
 interface ResourceListProps {
   resource: string;
 }
@@ -23,9 +14,9 @@ interface Record {
   title: string;
   body: string;
 }
-*/
 
-const ResourceList: FC<ResourceListProps> = props => {
+// const ResourceList: FC<ResourceListProps> = props => {
+const ResourceList = (props: ResourceListProps) => {
   const { resource } = props;
 
   const [resources, setResources] = useState([]);
@@ -35,6 +26,7 @@ const ResourceList: FC<ResourceListProps> = props => {
     setResources(response.data);
   };
 
+  // (componentDidUpdate, componentDidMount, componentWillUnmount)
   // does not deal with returning values; no types are necessary
   useEffect(() => {
     fetchResource(resource);
